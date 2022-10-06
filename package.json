@@ -32,6 +32,7 @@
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "rollup -c rollup.config.js",
     "build": "npm run build:types && npm run build:js && typedoc --out docs --target es6 --theme minimal --mode file src",
+    "prepare": "npm run build",
     "start": "rollup -c rollup.config.ts -w",
     "start-server": "pouchdb-server --in-memory",
     "ci": "start-server-and-test start-server :5984",
